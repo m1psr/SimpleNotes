@@ -14,26 +14,30 @@
     self = [super init];
     
     if (self) {
-        self.text = @"New note";
-        self.date = [NSDate date];
+        _text = @"New note";
+        _date = [NSDate date];
+        _fontColor = [UIColor blackColor];
     }
     
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder {
-    [coder encodeObject:self.text forKey:@"text"];
-    [coder encodeObject:self.date forKey:@"date"];
+    [coder encodeObject:_text forKey:@"text"];
+    [coder encodeObject:_date forKey:@"date"];
+    [coder encodeObject:_fontColor forKey:@"fontColor"];
 }    
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     
     if (self) {
-        self.text = [aDecoder decodeObjectForKey:@"text"];
-        self.date = [aDecoder decodeObjectForKey:@"date"];
+        _text = [decoder decodeObjectForKey:@"text"];
+        _date = [decoder decodeObjectForKey:@"date"];
+        _fontColor = [decoder decodeObjectForKey:@"fontColor"];
     }
     
     return self; 
 }
+
 @end

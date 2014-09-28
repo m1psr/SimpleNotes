@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C8F114719D80CE000FC6A42 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F114619D80CE000FC6A42 /* Storyboard.storyboard */; };
+		0C8F114B19D8104F00FC6A42 /* PSRColorSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F114A19D8104F00FC6A42 /* PSRColorSelectorViewController.m */; };
 		1F42EFB1190978A700B91F5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42EFB0190978A700B91F5B /* Foundation.framework */; };
 		1F42EFB3190978A700B91F5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42EFB2190978A700B91F5B /* CoreGraphics.framework */; };
 		1F42EFB5190978A700B91F5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42EFB4190978A700B91F5B /* UIKit.framework */; };
@@ -39,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		0C8F114619D80CE000FC6A42 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		0C8F114819D8104F00FC6A42 /* PSRColorSelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRColorSelectorDelegate.h; sourceTree = "<group>"; };
+		0C8F114919D8104F00FC6A42 /* PSRColorSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRColorSelectorViewController.h; sourceTree = "<group>"; };
+		0C8F114A19D8104F00FC6A42 /* PSRColorSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRColorSelectorViewController.m; sourceTree = "<group>"; };
 		1F42EFAD190978A700B91F5B /* SimpleNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F42EFB0190978A700B91F5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F42EFB2190978A700B91F5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8F114C19D8105500FC6A42 /* PSRColorSelector */ = {
+			isa = PBXGroup;
+			children = (
+				0C8F114819D8104F00FC6A42 /* PSRColorSelectorDelegate.h */,
+				0C8F114919D8104F00FC6A42 /* PSRColorSelectorViewController.h */,
+				0C8F114A19D8104F00FC6A42 /* PSRColorSelectorViewController.m */,
+			);
+			name = PSRColorSelector;
+			sourceTree = "<group>";
+		};
 		1F42EFA4190978A700B91F5B = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +137,7 @@
 		1F42EFB6190978A700B91F5B /* SimpleNotes */ = {
 			isa = PBXGroup;
 			children = (
+				0C8F114C19D8105500FC6A42 /* PSRColorSelector */,
 				1F42EFBF190978A700B91F5B /* PSRAppDelegate.h */,
 				1F42EFC0190978A700B91F5B /* PSRAppDelegate.m */,
 				1F42EFE619097ED100B91F5B /* PSRMasterViewController.h */,
@@ -279,6 +294,7 @@
 				1F42EFC1190978A700B91F5B /* PSRAppDelegate.m in Sources */,
 				1F42EFE4190978E200B91F5B /* PSRNoteManager.m in Sources */,
 				1F42EFE3190978E200B91F5B /* PSRNote.m in Sources */,
+				0C8F114B19D8104F00FC6A42 /* PSRColorSelectorViewController.m in Sources */,
 				1F42EFEB190989DC00B91F5B /* PSRDetailViewController.m in Sources */,
 				1F42EFE819097ED100B91F5B /* PSRMasterViewController.m in Sources */,
 				1F42EFBD190978A700B91F5B /* main.m in Sources */,
