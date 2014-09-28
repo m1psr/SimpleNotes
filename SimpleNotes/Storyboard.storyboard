@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDl-0E-35a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="470"/>
+            <point key="canvasLocation" x="1085" y="470"/>
         </scene>
         <!--Выбор шрифта-->
         <scene sceneID="XYO-64-rtc">
