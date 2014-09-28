@@ -49,6 +49,14 @@
     [self.tableView reloadData];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[PSRDetailViewController class]]) {
+        PSRDetailViewController *dVK = (PSRDetailViewController *)segue.destinationViewController;
+        dVK.note = sender;
+    }
+}
+
 #pragma mark - UITableView delegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -71,11 +79,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    PSRDetailViewController *detailVC = [[PSRDetailViewController alloc] init];
     PSRNote *note = [[[PSRNoteManager sharedManager] notes] objectAtIndex:indexPath.row];
-//    detailVC.textView.text = note.text;
-    detailVC.note = note;
-    [self.navigationController pushViewController:detailVC animated:YES];
+    [self performSegueWithIdentifier:@"masterDetailSegue" sender:note];
 }
 
 @end

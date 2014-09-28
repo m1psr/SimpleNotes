@@ -97,9 +97,9 @@
 		0C8F114C19D8105500FC6A42 /* PSRColorSelector */ = {
 			isa = PBXGroup;
 			children = (
-				0C8F114819D8104F00FC6A42 /* PSRColorSelectorDelegate.h */,
 				0C8F114919D8104F00FC6A42 /* PSRColorSelectorViewController.h */,
 				0C8F114A19D8104F00FC6A42 /* PSRColorSelectorViewController.m */,
+				0C8F114819D8104F00FC6A42 /* PSRColorSelectorDelegate.h */,
 			);
 			name = PSRColorSelector;
 			sourceTree = "<group>";
@@ -417,6 +417,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleNotes/SimpleNotes-Prefix.pch";
 				INFOPLIST_FILE = "SimpleNotes/SimpleNotes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -430,6 +431,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleNotes/SimpleNotes-Prefix.pch";
 				INFOPLIST_FILE = "SimpleNotes/SimpleNotes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

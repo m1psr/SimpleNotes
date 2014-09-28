@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "PSRNote.h"
+#import "PSRColorSelectorDelegate.h"
 
-@interface PSRDetailViewController : UIViewController
+@interface PSRDetailViewController : UIViewController <PSRColorSelectorDelegate>
 
-@property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) PSRNote *note;
+@property (weak, nonatomic) IBOutlet UITextView *noteTextView;
 
 @end
