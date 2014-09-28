@@ -17,6 +17,7 @@
         _text = @"New note";
         _date = [NSDate date];
         _fontColor = [UIColor blackColor];
+        _font = nil;
     }
     
     return self;
@@ -26,6 +27,7 @@
     [coder encodeObject:_text forKey:@"text"];
     [coder encodeObject:_date forKey:@"date"];
     [coder encodeObject:_fontColor forKey:@"fontColor"];
+    [coder encodeObject:_font forKey:@"font"];
 }    
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -35,6 +37,7 @@
         _text = [decoder decodeObjectForKey:@"text"];
         _date = [decoder decodeObjectForKey:@"date"];
         _fontColor = [decoder decodeObjectForKey:@"fontColor"];
+        _font = [decoder decodeObjectForKey:@"font"];
     }
     
     return self; 

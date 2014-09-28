@@ -11,5 +11,6 @@
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) UIColor *fontColor;
+@property (nonatomic, strong) UIFont *font;
 
 @end

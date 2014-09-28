@@ -8,10 +8,7 @@
 
 #import "PSRDetailViewController.h"
 #import "PSRColorSelectorViewController.h"
-
-//@interface PSRDetailViewController ()
-//
-//@end
+#import "PSRFontSelectorViewController.h"
 
 @implementation PSRDetailViewController
 
@@ -33,6 +30,10 @@
     if ([segue.destinationViewController isKindOfClass:[PSRColorSelectorViewController class]]) {
         PSRColorSelectorViewController *cSVK = (PSRColorSelectorViewController *)segue.destinationViewController;
         cSVK.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"fontSelectorSegue"]) {
+        UINavigationController *nK = (UINavigationController *)segue.destinationViewController;
+        PSRFontSelectorViewController *fSVK = (PSRFontSelectorViewController *)nK.topViewController;
+        fSVK.delegate = self;
     }
 }
 
@@ -41,13 +42,10 @@
 - (void)displayDetail
 {
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:self.note.text];
-    
-//    UIFont *font = [UIFont fontWithName:@"Avenir-Light" size:60];
-//    [title addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, title.length)];
-    
-    
     [attributedText addAttribute:NSForegroundColorAttributeName value:self.note.fontColor range:NSMakeRange(0, attributedText.length)]; // add color
-
+    if (self.note.font) {
+        [attributedText addAttribute:NSFontAttributeName value:self.note.font range:NSMakeRange(0, attributedText.length)]; // add font
+    }
     self.noteTextView.attributedText = attributedText;
 }
 
@@ -62,6 +60,26 @@
 - (UIColor *)startColor
 {
     return self.note.fontColor;
+}
+
+#pragma mark - PSRFontSelectorDelegate Methods -
+
+- (void)fontSelected:(NSString *)newFontName
+{
+    if (!newFontName) {
+        return;
+    }
+//    NSLog(@"self.note.fontName.pointSize = %f", self.note.fontName.pointSize);
+    self.note.font = [UIFont fontWithName:newFontName size:[UIFont systemFontSize]]; // ???: self.note.fontName.pointSize
+    [self displayDetail];
+}
+
+- (NSString *)startFontName
+{
+    if (self.note.font) {
+        return [self.note.font fontName];
+    }
+    return [[self.noteTextView font] fontName];
 }
 
 @end

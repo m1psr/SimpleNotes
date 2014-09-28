@@ -13,15 +13,10 @@
     UIColor *_color;
 }
 
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view.
-//    
-//}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     if ([self.delegate respondsToSelector:@selector(startColor)]) {
         _color = [self.delegate startColor];
     } else {

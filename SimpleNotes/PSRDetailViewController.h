@@ -10,8 +10,9 @@
 
 #import "PSRNote.h"
 #import "PSRColorSelectorDelegate.h"
+#import "PSRFontSelectorDelegate.h"
 
-@interface PSRDetailViewController : UIViewController <PSRColorSelectorDelegate>
+@interface PSRDetailViewController : UIViewController <PSRColorSelectorDelegate, PSRFontSelectorDelegate>
 
 @property (nonatomic, strong) PSRNote *note;
 @property (weak, nonatomic) IBOutlet UITextView *noteTextView;

@@ -11,7 +11,7 @@
 
 @interface PSRColorSelectorViewController : UIViewController
 
-@property (nonatomic, strong) id<PSRColorSelectorDelegate> delegate;
+@property (nonatomic, weak) id<PSRColorSelectorDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UISlider *sliderRed;
 @property (weak, nonatomic) IBOutlet UISlider *sliderGreen;

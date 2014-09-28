@@ -73,7 +73,13 @@
     }
     
     PSRNote *note = [[[PSRNoteManager sharedManager] notes] objectAtIndex:indexPath.row];
-    cell.textLabel.text = note.text;
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:note.text];
+    [attributedText addAttribute:NSForegroundColorAttributeName value:note.fontColor range:NSMakeRange(0, attributedText.length)]; // add color
+    if (note.font) {
+        [attributedText addAttribute:NSFontAttributeName value:note.font range:NSMakeRange(0, attributedText.length)]; // add font
+    }
+    cell.textLabel.attributedText = attributedText;
     
     return cell;
 }
