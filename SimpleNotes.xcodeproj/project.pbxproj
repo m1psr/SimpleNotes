@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C8F114719D80CE000FC6A42 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F114619D80CE000FC6A42 /* Storyboard.storyboard */; };
 		1F42EFB1190978A700B91F5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42EFB0190978A700B91F5B /* Foundation.framework */; };
 		1F42EFB3190978A700B91F5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42EFB2190978A700B91F5B /* CoreGraphics.framework */; };
 		1F42EFB5190978A700B91F5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42EFB4190978A700B91F5B /* UIKit.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C8F114619D80CE000FC6A42 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		1F42EFAD190978A700B91F5B /* SimpleNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F42EFB0190978A700B91F5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F42EFB2190978A700B91F5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 				1F42EFE719097ED100B91F5B /* PSRMasterViewController.m */,
 				1F42EFE9190989DC00B91F5B /* PSRDetailViewController.h */,
 				1F42EFEA190989DC00B91F5B /* PSRDetailViewController.m */,
+				0C8F114619D80CE000FC6A42 /* Storyboard.storyboard */,
 				1F876B9C19165105009DA0BB /* yoda.png */,
 				1F42EFE5190978EC00B91F5B /* Model */,
 				1F42EFC2190978A700B91F5B /* Images.xcassets */,
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F876B9D19165105009DA0BB /* yoda.png in Resources */,
+				0C8F114719D80CE000FC6A42 /* Storyboard.storyboard in Resources */,
 				1F42EFBB190978A700B91F5B /* InfoPlist.strings in Resources */,
 				1F42EFC3190978A700B91F5B /* Images.xcassets in Resources */,
 			);
